@@ -1,0 +1,259 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	object-fit: contain;
+}
+
+
+.hidden{
+	display:none;
+}
+
+.notVisible{
+	visibility: hidden;
+}
+
+button{
+	padding:0.7%;
+	font-size: 1em;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+
+#content{
+	width:90%;
+	margin:auto;
+	text-align: center;
+	padding:2%;
+}
+
+h1{
+	padding:2%;
+	font-family: Helvetica, sans-serif;
+	font-size: 4em;
+}
+
+input{
+	display: block;
+	margin:2% auto;
+	padding:0.5em;
+	border:none;
+	border-bottom: 1px solid black;
+	font-size: 1.2em;
+	font-family: Helvetica, sans-serif;
+
+}
+input:focus{
+	outline: none;
+
+}
+
+#intro, #game{
+	margin-top: 2%;
+/*	font-size: 1.4em;
+*/	font-family: Arial, sans-serif;
+}
+
+#intro{
+	font-size: 1.4em
+}
+
+#game{
+	font-size: 1.2em;
+}
+
+#game h3{
+	margin:0 0 2% 0;
+}
+
+.dice{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: center;
+	flex-wrap: wrap;
+	align-content: center;
+
+}
+
+#diceBlock{
+	display:inline-block;
+	border:2px solid black;
+	width:100px;
+	height:100px;
+	margin:0 1% 0 1%;
+
+	padding:0.5%;
+	border-radius: 10%;
+
+}
+
+.hover{
+	transition: all .2s ease-in-out;
+}
+
+.hover:hover{ /*this class gets added after roll is clicked and removed if a dice is pinned, so "hover" won't work before the player rolls or after a die is pinned*/
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.toPin{/*an inbetween class to identify which ones should be pinned*/
+	background-color: lightgrey;
+}
+
+#game .pinned{ /*diceblocks with this class are pinned and cannot be clicked*/
+	background-color: grey;
+	border:3px black solid;
+}
+
+#result{
+	margin:0 0 2% 0;
+	padding:2%;
+	font-weight: bold;
+}
+
+.lose{
+	background-color: rgba(122, 0, 0, 0.5);
+	color:darkred;
+}
+
+.win{
+	background-color: rgba(0, 122, 0, 0.5);
+	color:darkgreen;
+}
+
+.tie{
+	background-color: rgba(0, 0, 0,0.8);
+	color:white;
+}
+
+.buttons{
+	display: block;
+	margin:4% auto;
+}
+
+.buttons button{
+	margin:0 1%;
+}
+
+.overlay{
+	/*display:none;*/ /*default to hidden*/
+
+	width:100%;
+	height: 100%;
+	position:fixed;
+	top:0;
+	left:0;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 100;
+}
+
+.modal{
+
+	width:50%;
+	height:75%;
+	margin:auto;
+	position:relative;
+	top:20%;
+	left:50;
+
+	text-align: center;
+	background-color: white;
+	padding:4%;
+	overflow-y:scroll;
+
+}
+
+.modal h2{
+
+	margin:2% auto;
+	font-size:2em;
+	font-family: Helvetica, sans-serif;
+}
+
+.modal p{
+	font-family:Arial, sans-serif;
+	font-size: 1.2em; 
+	margin:4% 0;
+}
+
+.modal button{
+	font-size: 1.2em;
+}
+
+/*Dice block formating*/
+.dot{
+	display: block;
+	width:24px;
+	height:24px;
+	border-radius: 50%;
+
+	margin:2px;
+	background-color: black;
+
+	box-shadow: inset 0 3px 0 #211c1c, inset 0 -3px #524f4f;
+}
+
+#game .one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game .two{
+  display: flex;
+  justify-content: space-between;
+}
+
+#game .two .dot:nth-of-type(2){
+  align-self: flex-end;
+}
+
+#game .three {
+  display: flex;
+  justify-content: space-between;
+}
+  
+#game .three .dot:nth-of-type(2) {
+  align-self: center;
+}
+
+#game .three .dot:nth-of-type(3) {
+  align-self: flex-end;
+}
+
+#game .four, #game .six {
+  display: flex;
+  justify-content: space-between;
+}
+
+#game .four .column, #game .six .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#game .five {
+  display: flex;
+  justify-content: space-between;
+}
+  
+#game .five .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+  
+#game .five .column:nth-of-type(2) {
+  justify-content: center;
+}
+
+
+footer{
+	width:100%;
+	margin:auto;
+	position:fixed;
+	bottom:0;
+	padding:1em;
+}

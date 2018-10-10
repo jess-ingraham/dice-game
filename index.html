@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<title>A Simple Dice Game</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<script src="game.js"></script>
+		<link rel="stylesheet" href="base.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body>
+		<div id="content">
+			<h1>A Simple Dice Game</h1> 
+
+			<div id="intro">
+				Starting Dice Values (leave empty for random):
+				<input type="text" id="diceValues" name="diceValues">
+				<button id='go'>Go!</button>
+			</div>
+
+			<div id="game" class="hidden"></div>
+
+			<div id="error-message" class="overlay">
+				<div class="modal">
+			 		<p></p>
+			 		<button class="closeButton">Ok. Got it!</button>
+				</div>
+			</div>
+
+			<footer>
+				<button id="rules">Rules</button>
+				<button id="info">Info</button>
+			</footer>
+			
+		</div>
+	</body>
+</html>
