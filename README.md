@@ -1,5 +1,5 @@
 # A Simple Dice Game
-###This game was created by Jessica Ingraham for a previous course.
+### This game was created by Jessica Ingraham for a previous course.
 
 #### The objective
 This game is played against the computer. The point is to get the lowest score
